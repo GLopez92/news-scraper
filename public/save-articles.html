@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Let's Scrape the New York Times!</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse" style="margin-bottom: 0px;">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Mongo Scraper</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Home</a></li>
+		      <li><a href="#">Saved Articles</a></li>
+		    </ul>
+		    <button type="button" class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Save Articles</button>
+		  </div>
+		</nav>
+
+		<div class="container header_mongoScraper" style=" width: 100%">
+		  <div class="row">
+		    <div class="col-lg-12">
+		      <h2 id="title">Mongo Scraper</h2>
+		      <h3 id="sub-title">New York Time Edition</h3>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Article-Id:{article_id} </h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <form action="/action_page.php">
+				  <textarea name="message" rows="10" cols="75">Leave your comment!</textarea>
+				  <br>
+				  <input type="submit">
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="app.js"></script>
+   	</body>
+</html>

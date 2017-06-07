@@ -1,0 +1,54 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Mongo Scraper</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Saved Articles</a></li>
+    </ul>
+    <button type="button" class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Save Articles</button>
+  </div>
+</nav>
+
+<div class="container header_mongoScraper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 id="title">Mongo Scraper</h2>
+      <h3 id="sub-title">New York Time Edition</h3>
+    </div>
+  </div>
+</div>
+
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </br>
+          <p>Added {{article_id}} new articles</p>
+        </div> 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+        </div> 
+       
+        {{#each Articles}}
+          {{#if this.saved}}
+          <div>
+
+            <p>{{this.title}}</p>
+            <p>{{this.link}}</p>
+
+
+              <button class="btn btn-primary makeNote" data-id="{{this.id}}">Create Comment</button>
+              <button class="btn btn-primary seeNote" data-id="{{this.id}}">See Comments</button>
+
+          </div>
+          <br>
+          {{/if}}
+        {{/each}}
+        <div id="notes"></div>
+      </div>
+    </div> 
+</div>

@@ -1,0 +1,34 @@
+{
+  "name": "news-scraper",
+  "version": "1.0.0",
+  "description": "A web app that lets users leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLopez92/news-scraper.git"
+  },
+  "keywords": [
+    "news",
+    "scaper",
+    "cheerio",
+    "mongoose"
+  ],
+  "author": "Guillermo Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GLopez92/news-scraper/issues"
+  },
+  "homepage": "https://github.com/GLopez92/news-scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.10.4",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0"
+  }
+}

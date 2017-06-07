@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Let's Scrape the New York Times!</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse" style="margin-bottom: 0px;">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Mongo Scraper</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Home</a></li>
+		      <form action="/viewArticles" method="GET">
+		      	<li><a href="#">Saved Articles</a></li>
+		      </form>
+		    </ul>
+		    <form action="/scrape" method="Get">
+		    	<button type="button" class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">Get Articles</button>
+		    </form>
+		  </div>
+		</nav>
+
+		<div class="container header_mongoScraper" style=" width: 100%">
+		  <div class="row">
+		    <div class="col-lg-12">
+		      <h2 id="title">Mongo Scraper</h2>
+		      <h3 id="sub-title">New York Time Edition</h3>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-body">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          </br>
+		          <p>Added {{article_id}} new articles</p>
+		        </div> 
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+		        </div>
+		      </div>
+		    </div> 
+		</div>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="app.js"></script>
+   	</body>
+</html>
