@@ -26,7 +26,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/scraper");
+mongoose.connect("mongodb://heroku_3k75k7qf:ndfn4ig5sgmht2fto7f6rmnr4g@ds157571.mlab.com:57571/heroku_3k75k7qf");
 var db = mongoose.connection;
 
 db.once("open", function() {
